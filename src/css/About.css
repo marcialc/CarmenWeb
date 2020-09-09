@@ -1,0 +1,46 @@
+.about-wrapper {
+    margin: 0;
+    overflow: auto;
+    background: #ebebeb;
+    min-height: 100vh;
+}
+
+.about-header {
+    position: sticky;
+    top: 0;
+    height: 70px;
+    border-bottom: 2px solid black;
+}
+
+.about-header p{
+    position: absolute;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-size: 35px;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+
+.about-header a {
+    color: black;
+}
+
+.about-me {
+    display: flex;
+}
+
+.about-me img {
+    width: 25vw;
+    height: 25vw;
+    padding-top: 10vh;
+    padding-right: 200px;
+    padding-left: 50px;
+}
+
+.about-me p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    padding-top: 60px;
+    padding-right: 80px;
+}
