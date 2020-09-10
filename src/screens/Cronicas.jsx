@@ -1,21 +1,80 @@
 import React, { Component } from 'react';
 import '../css/Cronicas.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import LeftArrow from '../components/LeftArrow';
+import RightArrow from '../components/RightArrow';
+import Slide from '../components/Slide';
+import cronicasData from '../data';
+// import { Carousel } from 'react-responsive-carousel';
 
 export default class Cronicas extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      activeIndex: 0,
+      
+      length: cronicasData.length
+    };
+  }
+
+  goToPrevSlide() {
+    let index = this.state.activeIndex;
+    let length = this.state.length;
+
+    if(index < 1) {
+      index = length - 1;
+    }
+    else {
+      index--;
+    }
+
+    this.setState({
+      activeIndex: index
+    });
+  }
+
+  goToNextSlide() {
+      let index = this.state.activeIndex;
+      let length = this.state.length;
+
+      if(index === length - 1) {
+        index = 0
+      }
+      else {
+        index++;
+      }
+
+      this.setState({
+        activeIndex: index
+      });
+  }
+
     
   render() {
     return (
       <div className="cronicas-wrapper">
           <div className="cronicas-header">
-          <a href="/"><p>CARMEN RUIZ</p></a>
+          <a href="/"><p className="name">CARMEN RUIZ</p></a>
+          <p className="title">PARA QUE NO QUEDE EN EL OLVIDO</p>
           </div>
-          <Carousel>
-              <div>
-                  <img src={require('../assets/carmenPardo.jpg')} alt=""/>
-              </div>
-          </Carousel>
+          <div className='slider'>
+        <div className='slider-items'>
+          <LeftArrow
+            goToPrevSlide={() => this.goToPrevSlide()}
+          />
+        <div className='slider-text'>
+          <Slide
+            activeIndex={this.state.activeIndex}
+            goToNextSlide={() => this.goToNextSlide()}
+          />
+        </div>
+          <RightArrow
+            goToNextSlide={() => this.goToNextSlide()}
+          />
+        </div>
+      </div>
       </div>
     );
   }
