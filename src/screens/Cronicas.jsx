@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import LeftArrow from '../components/LeftArrow';
 import RightArrow from '../components/RightArrow';
 import Slide from '../components/Slide';
-import cronicasData from '../data';
+import cronicasData from '../cronicas-data';
 // import { Carousel } from 'react-responsive-carousel';
 
 export default class Cronicas extends Component {
@@ -74,6 +74,10 @@ export default class Cronicas extends Component {
             goToNextSlide={() => this.goToNextSlide()}
           />
         </div>
+        <form className="cronicas-form"> 
+          <input className="form-input" type="text" placeholder="Chapter Number"/> <br/>
+          <input className="form-button" type="submit" value="Browse"/>
+        </form>
       </div>
       </div>
     );

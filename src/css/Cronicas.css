@@ -16,43 +16,48 @@ background: white;
 .cronicas-header {
     position: sticky;
     top: 0;
-    height: 50px;
-    padding-top: 25px;
+    height: 75px;
     border-bottom: 2px solid black;
-    background: rgb(3, 105, 58);
 }
 
 .name{
     position: absolute;
-    margin: 0;
     padding-left: 20px;
+    height: 50px;
+    padding-right: 30px;
+    font-size: 30px;
+    border-right: 1px solid black;
 }
 
 .name:hover {
     background: #c7c7c7;
+    border-bottom: 2px solid black;
 }
 
 .cronicas-header p {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 35px;
+    padding-top: 25px;
     margin: 0;
     margin-bottom: 20px;
 }
 
 .title {
     font-weight: 500;
-    color: white;
+    color: black;
+    font-size: 35px;
+
 }
 
 .cronicas-header a {
-    color: white;
+    color: black;
     margin: 0;
 }
 
 img {
-width: 200px;
-height: 200px;
+width: 250px;
+height: auto;
+max-height: 250px;
 }
 
 #items {
@@ -93,7 +98,7 @@ align-content: center;
 align-items: center;
 text-align: center;
 width: 100%;
-padding: 100px 0px 0px 0px;
+padding: 150px 0px 0px 0px;
 }
 
 .slider-items {
@@ -161,3 +166,41 @@ font-family: 'Courier New', Courier, monospace;
 .fa {
 color: #707070;
 }
+
+/* --- Submit Form --- */
+
+.cronicas-form {
+    padding-top: 40px;
+}
+
+.form-input {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    width: 110px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.form-button {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 150px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #bfebfc;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+}
+
+.form-button:hover {
+    background: rgb(44, 197, 182);
+    box-shadow: 2px 2px 20px #AFE9FF;
+}
+
+/* -x- Submit Form -x- */
