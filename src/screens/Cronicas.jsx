@@ -14,8 +14,7 @@ export default class Cronicas extends Component {
 
     this.state = {
       activeIndex: 0,
-      
-      length: cronicasData.length
+      length: cronicasData.length,
     };
   }
 
@@ -74,10 +73,6 @@ export default class Cronicas extends Component {
             goToNextSlide={() => this.goToNextSlide()}
           />
         </div>
-        <form className="cronicas-form"> 
-          <input className="form-input" type="text" placeholder="Chapter Number"/> <br/>
-          <input className="form-button" type="submit" value="Browse"/>
-        </form>
       </div>
       </div>
     );
@@ -85,3 +80,10 @@ export default class Cronicas extends Component {
 }
 
 
+{/* 
+  This is to put a button and a text field at the end  under the carousel 
+  <form className="cronicas-form"> 
+          <input className="form-input" type="text" placeholder="Chapter Number"/> <br/>
+          <input className="form-button" type="submit" value="Browse"/>
+</form> 
+*/}

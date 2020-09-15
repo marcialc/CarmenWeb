@@ -1,0 +1,50 @@
+
+  import Iframe from 'react-iframe';
+  import ReactDOM from 'react-dom';
+
+  state = { show: false};
+   
+  showModal = () => {
+    this.setState({ show: true});
+  }
+
+  hideModal = () => {
+    this.setState({ show: false});
+  }
+
+
+
+
+
+<Modal show={this.state.show} handleClose={this.hideModal}>
+  <Iframe
+  url={require('../pdf/pdf1.pdf')} 
+  width="600px"
+  height="650px"
+  overflow="auto"
+  frameBorder="0"
+  display="initial"
+  />
+ </Modal>
+
+<a onClick={this.showModal}> 
+
+</a>
+
+
+let container = document.createElement("div");
+document.body.appendChild(container);
+ReactDOM.render(<Slide />, container);
+
+let Modal = ({ handleClose, show, children }) => {
+  const showHideClassName = show ? "modal display-block" : "modal display-none";
+
+  return (
+    <div className={showHideClassName}>
+      <section className="modal-main">
+        {children}
+        <button onClick={handleClose}>close</button>
+      </section>
+    </div>
+  );
+}

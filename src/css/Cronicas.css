@@ -49,15 +49,16 @@ background: white;
 
 }
 
-.cronicas-header a {
+a {
     color: black;
     margin: 0;
+    text-decoration: none;
 }
 
 img {
 width: 250px;
 height: auto;
-max-height: 250px;
+max-height: 300px;
 }
 
 #items {
@@ -89,6 +90,7 @@ text-align: center;
 
 .active {
 display: block;
+height: 70vh;
 }
 
 .slider {
@@ -103,17 +105,6 @@ padding: 150px 0px 0px 0px;
 
 .slider-items {
 display: flex;
-flex-direction: row;
-align-content: center;
-align-items: center;
-}
-
-.noButton {
-display: none;
-}
-
-.button {
-border-radius: 30px;
 border: none;
 color: #FFFFFF;
 font-family:'Open Sans', 'Sans-Serif';
@@ -166,6 +157,51 @@ font-family: 'Courier New', Courier, monospace;
 .fa {
 color: #707070;
 }
+
+/* --- PDF CSS --- */
+
+.modal {
+    margin-left: 100px;
+    width: 600px;
+    height: 650px;
+    border: 1px solid #ccc;
+    transition: 1.1s ease-out;
+    box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2);
+    filter: blur(0);
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex: row;
+  }
+  .modal.off {
+    opacity: 0;
+    visibility: hidden;
+    filter: blur(8px);
+    transform: scale(0.33);
+    box-shadow: 1rem 0 0 rgba(0, 0, 0, 0.2);
+  }
+
+.modal Iframe {
+    
+}
+
+  .close-button {
+      padding: 10px 10px;
+      right: 10px;
+      margin-top: 20vh;
+      margin-left: 10px;
+  }
+
+  .close-button:hover {
+    background: #AFE9FF;
+    text-decoration: none;
+  }
+
+/* -x- PDF CSS -x- */
+
+
+
 
 /* --- Submit Form --- */
 
