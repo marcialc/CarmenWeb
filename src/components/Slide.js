@@ -10,7 +10,7 @@ export default class Slide extends Component {
     super(props);
     this.state = {
       cronicas: cronicasData,
-      show: true
+      show: false
     };
   }
 
@@ -28,18 +28,16 @@ export default class Slide extends Component {
           <div className={
             index === this.props.activeIndex ? 'active' : 'slide'}
             key={index}>
-                  <Modal onClose={this.showModal} show={this.state.show}>
+                  <Modal className="modal-wrap" onClose={this.showModal} show={this.state.show}>
                     <Iframe
                       url={require('../pdf/pdf1.pdf')} 
                       width="600px"
-                      height="600px"
+                      height="700px"
                       overflow="auto"
                       frameBorder="0"
                     />
                   </Modal>
                   <a
-                    class="toggle-button"
-                    id="centered-toggle-button"
                     onClick={e => {
                       this.showModal(e);
                     }}
