@@ -15,11 +15,7 @@ export default class Modal extends Component {
         return (
             <div class="modal" id="modal">
             <div class="content">{this.props.children}</div>
-            <div class="actions">
-                <button class="close-button" onClick={this.onClose}>
-                close
-                </button>
-            </div>
+            
             </div>
         );
     }
@@ -29,3 +25,10 @@ Modal.propTypes = {
     onClose: PropTypes.func.isRequired,
     show: PropTypes.bool.isRequired
 };
+
+
+{/* <div class="actions">
+    <button class="close-button" onClick={this.onClose}>
+    close
+    </button>
+</div> */}

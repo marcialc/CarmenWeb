@@ -61,6 +61,7 @@ export default class Cronicas extends Component {
           <div className='slider'>
         <div className='slider-items'>
           <LeftArrow
+            className="leftArrow"
             goToPrevSlide={() => this.goToPrevSlide()}
           />
         <div className='slider-text'>

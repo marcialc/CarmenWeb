@@ -3,6 +3,8 @@ import cronicasData from '../cronicas-data';
 import '../css/Cronicas.css';
 import Modal from "./Modal";
 import Iframe from 'react-iframe';
+import PropTypes from "prop-types";
+
 
 export default class Slide extends Component {
 
@@ -31,23 +33,25 @@ export default class Slide extends Component {
                   <Modal className="modal-wrap" onClose={this.showModal} show={this.state.show}>
                     <Iframe
                       url={require('../pdf/pdf1.pdf')} 
-                      width="600px"
-                      height="700px"
+                      width="800px"
+                      height="800px"
                       overflow="auto"
                       frameBorder="0"
                     />
                   </Modal>
+                  <div className="chapter">
                   <a
+                    className="chapter"
                     onClick={e => {
                       this.showModal(e);
                     }}
                   >
                      <div style={{ height:"300px" }}>
                       <img src={require('../assets/cronica-'+cronica.picture)} alt='chapter-cover'></img>
-                  </div>
-                  <h1 className='slider-item heading'>{cronica.title}</h1>
-
+                    </div>
+                    <h1 className='slider-item heading'>{cronica.title}</h1>
                   </a>
+                  </div>
           </div>
         )
       }
@@ -55,6 +59,3 @@ export default class Slide extends Component {
     )
   }
 }
-
-
-
