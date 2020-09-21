@@ -15,7 +15,6 @@ export default class Modal extends Component {
         return (
             <div class="modal" id="modal">
             <div class="content">{this.props.children}</div>
-            
             </div>
         );
     }

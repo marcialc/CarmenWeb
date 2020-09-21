@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useRef } from 'react';
 import cronicasData from '../cronicas-data';
 import '../css/Cronicas.css';
 import Modal from "./Modal";
@@ -16,11 +16,13 @@ export default class Slide extends Component {
     };
   }
 
+
   showModal = e => {
     this.setState({
       show:!this.state.show
     })
   }
+  // Try adding modal insid slide to fix and add close click
 
   render() {
     return(
@@ -30,16 +32,18 @@ export default class Slide extends Component {
           <div className={
             index === this.props.activeIndex ? 'active' : 'slide'}
             key={index}>
-                  <Modal className="modal-wrap" onClose={this.showModal} show={this.state.show}>
-                    <Iframe
+                  {this.state.show &&
+                    <div class="modal" id="modal" ref={node => this.node = node}>
+                      <Iframe
                       url={require('../pdf/pdf1.pdf')} 
                       width="800px"
                       height="800px"
                       overflow="auto"
                       frameBorder="0"
-                    />
-                  </Modal>
-                  <div className="chapter">
+                        />
+                    </div>
+                  }
+                  <div className="chapter"> 
                   <a
                     className="chapter"
                     onClick={e => {
@@ -53,9 +57,20 @@ export default class Slide extends Component {
                   </a>
                   </div>
           </div>
+          
         )
       }
       </section>
     )
   }
 }
+
+{/* <Modal className="modal-wrap" onClose={this.showModal} show={this.state.show}>
+<Iframe
+  url={require('../pdf/pdf1.pdf')} 
+  width="800px"
+  height="800px"
+  overflow="auto"
+  frameBorder="0"
+/>
+</Modal> */}
