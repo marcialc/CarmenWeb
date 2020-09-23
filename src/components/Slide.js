@@ -1,30 +1,25 @@
 import React, { Component, useRef } from 'react';
 import cronicasData from '../cronicas-data';
 import '../css/Cronicas.css';
-import Modal from "./Modal";
+// import Modal from "./Modal";
 import Iframe from 'react-iframe';
 import PropTypes from "prop-types";
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import Modal from '@material-ui/core/Modal';
 
+export default function Slide() {
 
-export default class Slide extends Component {
+  const [open, setOpen] = React.useState(false);
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      cronicas: cronicasData,
-      show: false
-    };
-  }
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-  showModal = e => {
-    this.setState({
-      show:!this.state.show
-    })
-  }
   // Try adding modal insid slide to fix and add close click
-
-  render() {
     return(
       <section>
       {
@@ -32,23 +27,28 @@ export default class Slide extends Component {
           <div className={
             index === this.props.activeIndex ? 'active' : 'slide'}
             key={index}>
+
                   {this.state.show &&
-                    <div class="modal" id="modal" ref={node => this.node = node}>
-                      <Iframe
-                      url={require('../pdf/pdf1.pdf')} 
-                      width="800px"
-                      height="800px"
-                      overflow="auto"
-                      frameBorder="0"
-                        />
-                    </div>
+                    <Modal
+                    open={open}
+                    onClose={handleClose}
+                    >
+                      <div class="modal" id="modal" ref={node => this.node = node}>
+                        <Iframe
+                        url={require('../pdf/pdf1.pdf')} 
+                        width="800px"
+                        height="800px"
+                        overflow="auto"
+                        frameBorder="0"
+                          />
+                      </div>
+                    </Modal>
                   }
-                  <div className="chapter"> 
+
+                  <div className="chapter" ref={this.node}> 
                   <a
                     className="chapter"
-                    onClick={e => {
-                      this.showModal(e);
-                    }}
+                    onClick={handleOpen}
                   >
                      <div style={{ height:"300px" }}>
                       <img src={require('../assets/cronica-'+cronica.picture)} alt='chapter-cover'></img>
@@ -56,13 +56,11 @@ export default class Slide extends Component {
                     <h1 className='slider-item heading'>{cronica.title}</h1>
                   </a>
                   </div>
-          </div>
-          
+            </div>  
         )
       }
       </section>
     )
-  }
 }
 
 {/* <Modal className="modal-wrap" onClose={this.showModal} show={this.state.show}>
