@@ -1,0 +1,45 @@
+.CronicasWrapper {
+    font-family: 'Old Standard TT', serif;
+}
+
+.Cronicas {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20vh;
+    width: 100%;
+}
+
+.title {
+    font-weight: 500;
+    color: black;
+    font-size: 35px;
+}
+
+.cronicas-header {
+    position: sticky;
+    top: 0;
+    height: 75px;
+    border-bottom: 2px solid black;
+}
+
+.name{
+    position: absolute;
+    padding-left: 20px;
+    height: 50px;
+    padding-right: 30px;
+    font-size: 30px;
+    border-right: 1px solid black;
+}
+
+.name:hover {
+    background: #c7c7c7;
+    border-bottom: 2px solid black;
+}
+
+.cronicas-header p {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 25px;
+    margin: 0;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,22 @@
+.Cronica {
+    width: 400px;
+    height: 400px;
+    margin: 50px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.Cronica:hover {
+    background-color: rgb(212, 231, 215);
+}
+
+.Cronica p {
+    font-size: 25px;
+    margin: 10px;
+}
+
+.Cronica img {
+    margin-top: 20px;
+    width: 300px;
+    height: 300px;
+}

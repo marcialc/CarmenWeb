@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import '../css/Home.css';
-// import About from './About.jsx';
-// import { Link } from 'react-router-dom';
 
 export default class Home extends Component {
     

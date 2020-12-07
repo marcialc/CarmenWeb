@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import '../css/Cronicas.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import LeftArrow from '../components/LeftArrow';
-import RightArrow from '../components/RightArrow';
+import LeftArrow from '../components/ui/Arrows/LeftArrow';
+import RightArrow from '../components/ui/Arrows/RightArrow';
 import Slide from '../components/Slide';
 import cronicasData from '../cronicas-data';
 // import { Carousel } from 'react-responsive-carousel';

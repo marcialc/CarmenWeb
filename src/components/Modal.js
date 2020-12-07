@@ -24,10 +24,3 @@ Modal.propTypes = {
     onClose: PropTypes.func.isRequired,
     show: PropTypes.bool.isRequired
 };
-
-
-{/* <div class="actions">
-    <button class="close-button" onClick={this.onClose}>
-    close
-    </button>
-</div> */}
