@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import '../css/About.css'
+import classes from '../css/About.css'
 
 export default class About extends Component {
     
   render() {
     return (
-      <div className="about-wrapper">
-        <div className="about-header">
+      <div className={classes.aboutWrapper}>
+        <div className={classes.aboutHeader}>
         <a href="/"><p>CARMEN RUIZ</p></a>
         </div>
-        <div className="about-me">
+        <div className={classes.aboutMe}>
         <img src={require('../assets/carmenFace.jpg')} alt='profile'></img>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue nisi nec laoreet pretium. Pellentesque aliquet enim varius nisi aliquet elementum. In sit amet blandit enim. Suspendisse feugiat eros magna, non accumsan tellus tincidunt gravida. Vivamus sed nisl sed felis tristique rutrum. Nunc eu placerat tellus. Donec et quam sagittis, bibendum nisi laoreet, consequat nisi. Etiam nisl ante, fermentum varius elit eget, feugiat aliquam augue.
 

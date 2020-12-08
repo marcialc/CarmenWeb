@@ -1,9 +1,12 @@
 import React from 'react';
 
+import classes from './Arrows.css'
+import leftArrow from './left-arrow.png';
+
 const LeftArrow = (props) => {
     return(
-      <div className='backArrow' onClick={props.goToPrevSlide}>
-        <i className='fa fa-angle-left fa-3x' aria-hidden='true'></i>
+      <div className={classes.Arrow} onClick={props.goToPrevSlide}>
+        <img src={leftArrow} />
       </div>
     )
 }

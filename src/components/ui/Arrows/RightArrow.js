@@ -1,10 +1,12 @@
 import React from 'react';
-import 'font-awesome/css/font-awesome.min.css';
+
+import classes from './Arrows.css';
+import rightArrow from './right-arrow.png'
 
 const RightArrow = (props) => {
     return(
-      <div className='backArrow' onClick={props.goToNextSlide}>
-        <i className='fa fa-angle-right fa-3x' aria-hidden='true'></i>
+      <div className={classes.Arrow} onClick={props.goToNextSlide}>
+        <img src={rightArrow} />
       </div>
     )
 }

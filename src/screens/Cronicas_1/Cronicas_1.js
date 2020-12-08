@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './Cronicas_1.css';
+import classes from './Cronicas_1.css';
 import dataJSON from '../../cronicas-data';
 import Cronica from './Cronica/Cronica';
 import LeftArrow from '../../components/ui/Arrows/LeftArrow';
@@ -71,11 +71,11 @@ class Cronicas_1 extends Component {
 
     if(cronicasData.length !==0){
       displayData = (
-        <div className="Cronicas" >
+        <div className={classes.Cronicas} >
           <LeftArrow goToPrevSlide={this.leftArrowHandler} />
-          <Cronica image={cronicasData[first].picture} title={cronicasData[first].title} clicked={this.showChapterHandler} />
-          <Cronica image={cronicasData[middle].picture} title={cronicasData[middle].title} clicked={this.showChapterHandler} />
-          <Cronica image={cronicasData[last].picture} title={cronicasData[last].title} clicked={this.showChapterHandler} />
+          <Cronica hide={true}  className={classes.Extra} image={cronicasData[first].picture} title={cronicasData[first].title} clicked={this.showChapterHandler} />
+          <Cronica hide={false} image={cronicasData[middle].picture} title={cronicasData[middle].title} clicked={this.showChapterHandler} />
+          <Cronica hide={true} className={classes.Extra} image={cronicasData[last].picture} title={cronicasData[last].title} clicked={this.showChapterHandler} />
           <RightArrow goToNextSlide={this.rightArrowHandler} />
         </div>
       )
@@ -83,11 +83,12 @@ class Cronicas_1 extends Component {
 
 
     return (
-      <div className="CronicasWrapper">
-          <div className="cronicas-header">
-            <a href="/"><p className="name">CARMEN RUIZ</p></a>
-            <p className="title">PARA QUE NO QUEDE EN EL OLVIDO</p>
-            <p>INDEX</p>
+      <div className={classes.CronicasWrapper}>
+          <div className={classes.CronicasHeader}>
+            <a href="/"><p className={classes.Name}>CARMEN RUIZ</p></a>
+            <p className={classes.Title}>PARA QUE NO QUEDE EN EL OLVIDO</p>
+            <img className={classes.Button} src={require('./index.png')} />
+            <button className={classes.PhoneButton}>INDEX</button>
           </div>
           <Modal show={this.state.clicked} modalClosed={this.closeChapterHandler} >
             <Pdf />

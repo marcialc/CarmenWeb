@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import '../css/Home.css';
+import classes from '../css/Home.css';
 
 export default class Home extends Component {
     
   render() {
     return (
-      <div className="main-container">
-        <div className="nav">
-            <a href="/carmen"><p className="nombre" >CARMEN RUIZ</p></a>
-            <a href="/cronicas"><p className="historias" >CRONICAS</p></a>
+      <div className={classes.mainContainer}>
+        <div className={classes.nav}>
+            <a href="/carmen"><p className={classes.nombre} >CARMEN RUIZ</p></a>
+            <a href="/trial"><p className={classes.historias} >CRONICAS</p></a>
         </div>
       </div>
     );

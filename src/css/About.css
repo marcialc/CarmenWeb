@@ -1,18 +1,18 @@
-.about-wrapper {
+.aboutWrapper {
     margin: 0;
     overflow: auto;
     background: #ebebeb;
     min-height: 100vh;
 }
 
-.about-header {
+.aboutHeader {
     position: sticky;
     top: 0;
     height: 70px;
     border-bottom: 2px solid black;
 }
 
-.about-header p{
+.aboutHeader p{
     position: absolute;
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
@@ -22,19 +22,19 @@
     margin-left: 20px;
 }
 
-.about-header p:hover {
+.aboutHeader p:hover {
     background: #c7c7c7;
 }
 
-.about-header a {
+.aboutHeader a {
     color: black;
 }
 
-.about-me {
+.aboutMe {
     display: flex;
 }
 
-.about-me img {
+.aboutMe img {
     width: 300px;
     height: auto;
     border-radius: 10%;
@@ -42,7 +42,7 @@
     margin-left: 30px;
 }
 
-.about-me p {
+.aboutMe p {
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     padding-top: 60px;
