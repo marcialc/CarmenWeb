@@ -1,13 +1,25 @@
 import React from 'react';
 
-import Iframe from 'react-iframe';
+import classes from './Pdf.css';
 
-const Pdf = (props) => {
+// const Pdf = (props) => {
+//     return( 
+//         <div className={classes.Pdf}>
+//         <object data={require('../../../pdf/pdf1.pdf')+"#toolbar=0"} type="application/pdf">
+//             <a href={require('../../../pdf/pdf1.pdf')}>test.pdf</a>
+//         </object>
+//         </div>
+//     )
+// }
+
+// export default Pdf;
+
+
+const Pdf = () => {
     return( 
         <embed 
-            style={{ height:"100%", width:"100%" }} 
-            src={require('../../../pdf/pdf1.pdf')}
-            zoom="scale"
+            className={classes.Pdf} 
+            src={require('../../../pdf/pdf1.pdf')+"#toolbar=0"}
             type="application/pdf"
         />
     )

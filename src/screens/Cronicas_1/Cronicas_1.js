@@ -5,8 +5,9 @@ import dataJSON from '../../cronicas-data';
 import Cronica from './Cronica/Cronica';
 import LeftArrow from '../../components/ui/Arrows/LeftArrow';
 import RightArrow from '../../components/ui/Arrows/RightArrow';
-import Modal from '../../components/Modal_1/Modal_1';
+import Modal from '../../components/Modal/Modal';
 import Pdf from '../../components/ui/Pdf/Pdf';
+import TableOfContents from '../../components/TableOfContents/TableOfContents';
 
 class Cronicas_1 extends Component {
 
@@ -16,7 +17,8 @@ class Cronicas_1 extends Component {
       first: 0,
       middle: 1,
       last: 2,
-      clicked: false
+      showChapter: false,
+      showIndex: false
   };
 
   componentDidMount () {
@@ -53,11 +55,39 @@ class Cronicas_1 extends Component {
   }
 
   showChapterHandler = () => {
-    this.setState({ clicked: true })
+    this.setState({ showChapter: true });
   }
 
   closeChapterHandler = () => {
-    this.setState({ clicked: false })
+    this.setState({ showChapter: false });
+  }
+
+  closeIndexHandler = () => {
+    this.setState({ showIndex: false });
+  }
+
+  openIndexHandler = () => {
+    this.setState({ showIndex: true });
+  }
+
+  indexHandler = (e) => {
+    let first;
+    let middle = e.target.id-1;
+    let last;
+
+    if(middle === 29) {
+      first = middle-1;
+      last = 0;
+    }else if(middle === 0){
+      first = 29;
+      last  = middle+1
+    }else{
+      first = middle-1;
+      last = middle+1;
+    }
+
+
+    this.setState({ first:first, middle:middle, last:last, showIndex: false });
   }
     
   render() {
@@ -87,10 +117,12 @@ class Cronicas_1 extends Component {
           <div className={classes.CronicasHeader}>
             <a href="/"><p className={classes.Name}>CARMEN RUIZ</p></a>
             <p className={classes.Title}>PARA QUE NO QUEDE EN EL OLVIDO</p>
-            <img className={classes.Button} src={require('./index.png')} />
-            <button className={classes.PhoneButton}>INDEX</button>
+            <img className={classes.Button} src={require("./index.png")} onClick={this.openIndexHandler} alt="Index-Button" />
+            <Modal show={this.state.showIndex} modalClosed={this.closeIndexHandler}>
+              <TableOfContents clicked={this.indexHandler} data={cronicasData} />
+            </Modal>
           </div>
-          <Modal show={this.state.clicked} modalClosed={this.closeChapterHandler} >
+          <Modal show={this.state.showChapter} modalClosed={this.closeChapterHandler} >
             <Pdf />
           </Modal>
           {displayData}

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
-import Home from './screens/Home.jsx';
+import Home from './screens/Home/Home';
 import About from './screens/About.jsx'
-import Cronicas from './screens/Cronicas.jsx';
 import Trial from './screens/Cronicas_1/Cronicas_1';
 
 function App() {
@@ -15,9 +14,6 @@ function App() {
         <About />
       </Route>
       <Route exact path="/cronicas">
-        <Cronicas />
-      </Route>
-      <Route exact path="/trial">
         <Trial />
       </Route>
     </Router>

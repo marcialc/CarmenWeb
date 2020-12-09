@@ -11,7 +11,7 @@ const Cronica = (props) => {
         if(props.hide){
             setHide(` ${classes.Hide}`)
         }
-    })
+    }, [props.hide])
 
     return (
         <div className={`${classes.Cronica} `+ hide} onClick={props.clicked}>

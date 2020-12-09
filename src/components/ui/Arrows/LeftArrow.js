@@ -6,7 +6,7 @@ import leftArrow from './left-arrow.png';
 const LeftArrow = (props) => {
     return(
       <div className={classes.Arrow} onClick={props.goToPrevSlide}>
-        <img src={leftArrow} />
+        <img src={leftArrow} alt="Left-Arrow" />
       </div>
     )
 }

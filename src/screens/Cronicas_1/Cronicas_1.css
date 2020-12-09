@@ -1,6 +1,4 @@
-.CronicasWrapper {
-    font-family: 'Old Standard TT', serif;
-}
+
 
 .Cronicas {
     display: flex;
@@ -25,16 +23,25 @@
 }
 
 .Button {
-    width: 50px; 
-    height: 50px;
-    margin-left: 10px;
+    width: 45px; 
+    height: 45px;
+    margin: 5px;
+    margin-right: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.Button:hover {
+    background-color: rgb(218, 214, 214);
+    border: 1px solid black;
 }
 
 .Name {
     position: absolute;
-    padding-left: 20px;
+    padding: 0 30px 5px 20px;
     height: 50px;
-    padding-right: 30px;
     font-size: 30px;
     border-right: 1px solid black;
 }
@@ -46,8 +53,7 @@
 
 .CronicasHeader p {
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    padding-top: 25px;
+    padding-top: 20px;
     margin: 0;
     margin-bottom: 20px;
 }
@@ -60,6 +66,10 @@
 
     .CronicasHeader {
         display: block;
+    }
+
+    .CronicasHeader p {
+        padding-top: 25px;
     }
 
     .Name {
@@ -80,7 +90,8 @@
     }
 
     .Button {
-        display: none;
+        margin-top: 60px;
+        margin-left: 40vw;
     }
 
     .Extra {

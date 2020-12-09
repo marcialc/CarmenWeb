@@ -6,7 +6,7 @@ import rightArrow from './right-arrow.png'
 const RightArrow = (props) => {
     return(
       <div className={classes.Arrow} onClick={props.goToNextSlide}>
-        <img src={rightArrow} />
+        <img src={rightArrow} alt="Right-Arrow" />
       </div>
     )
 }

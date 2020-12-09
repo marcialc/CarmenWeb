@@ -1,0 +1,15 @@
+.TableOfContents {
+    font-family: inherit;
+    font-size: 20px;
+    overflow: auto;
+    height: 100%;
+    margin: 0;
+}
+
+.TableOfContents li {
+    padding-bottom: 10px;
+}
+
+.TableOfContents li:hover {
+    color: teal;
+}
