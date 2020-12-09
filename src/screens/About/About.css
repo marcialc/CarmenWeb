@@ -46,3 +46,23 @@
     padding-top: 60px;
     padding-right: 80px;
 }
+
+@media (max-width:800px) {
+
+    .aboutMe {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .aboutMe img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        height: auto;
+    }
+
+    .aboutMe p {
+        padding: 0 15px 0 15px;
+    }
+}

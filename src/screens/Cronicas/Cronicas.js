@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import classes from './Cronicas_1.css';
+import classes from './Cronicas.css';
 import dataJSON from '../../cronicas-data';
 import Cronica from './Cronica/Cronica';
 import LeftArrow from '../../components/ui/Arrows/LeftArrow';
@@ -9,7 +9,7 @@ import Modal from '../../components/Modal/Modal';
 import Pdf from '../../components/ui/Pdf/Pdf';
 import TableOfContents from '../../components/TableOfContents/TableOfContents';
 
-class Cronicas_1 extends Component {
+class Cronicas extends Component {
 
   state = {
       cronicasData: [],
@@ -35,9 +35,9 @@ class Cronicas_1 extends Component {
     let middle = this.state.middle+1;
     let last = this.state.last+1;
 
-    if(last > 29) last = 0;
-    else if(middle > 29) middle = 0;
-    else if(first > 29) first = 0;
+    if(last > 59) last = 0;
+    else if(middle > 59) middle = 0;
+    else if(first > 59) first = 0;
 
     this.setState({ first:first, middle:middle, last:last })
   }
@@ -47,9 +47,9 @@ class Cronicas_1 extends Component {
     let middle = this.state.middle-1;
     let last = this.state.last-1;
 
-    if(first < 0) first = 29;
-    else if(middle < 0) middle = 29;
-    else if(last < 0) last = 29
+    if(first < 0) first = 59;
+    else if(middle < 0) middle = 59;
+    else if(last < 0) last = 59
 
     this.setState({ first:first, middle:middle, last:last })
   }
@@ -75,11 +75,11 @@ class Cronicas_1 extends Component {
     let middle = e.target.id-1;
     let last;
 
-    if(middle === 29) {
+    if(middle === 59) {
       first = middle-1;
       last = 0;
     }else if(middle === 0){
-      first = 29;
+      first = 59;
       last  = middle+1
     }else{
       first = middle-1;
@@ -132,4 +132,4 @@ class Cronicas_1 extends Component {
 }
 
 
-export default Cronicas_1;
+export default Cronicas;

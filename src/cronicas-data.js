@@ -148,5 +148,155 @@ export default [
   title: 'Marko',
   picture: '30.jpg',
   id: 30
+},
+{
+  title: 'Uta',
+  picture: '31.jpg',
+  id: 31
+},
+{
+  title: 'Las perlas vuidas',
+  picture: '32.jpg',
+  id: 32
+},
+{
+  title: 'Simpre encantador',
+  picture: '33.jpg',
+  id: 33
+},
+{
+  title: 'El diccionario',
+  picture: '34.jpg',
+  id: 34
+},
+{
+  title: 'Turbulencias políticas',
+  picture: '35.jpg',
+  id: 35
+},
+{
+  title: '¡Numas más!',
+  picture: '36.jpg',
+  id: 36
+},
+{
+  title: 'Una ciudad imaginaria',
+  picture: '37.jpg',
+  id: 37
+},
+{
+  title: 'Me llamo Nina',
+  picture: '38.jpg',
+  id: 38
+},
+{
+  title: 'Juego de té portugués',
+  picture: '39.jpg',
+  id: 39
+},
+{
+  title: '¡Vamos de campamento!',
+  picture: '40.jpg',
+  id: 40
+},
+{
+  title: 'Mis ruinas favoritas',
+  picture: '41.jpg',
+  id: 41
+},
+{
+  title: 'Puerta a una maravilla',
+  picture: '42.jpg',
+  id: 42
+},
+{
+  title: 'Paisaje interior',
+  picture: '43.jpg',
+  id: 43
+},
+{
+  title: 'Lugar de distinción',
+  picture: '44.jpg',
+  id: 44
+},
+{
+  title: 'Nuestros amigos extranjeros',
+  picture: '45.jpg',
+  id: 45
+},
+{
+  title: 'Negociando en el desierto',
+  picture: '46.jpg',
+  id: 46
+},
+{
+  title: 'El Papa y las chicas',
+  picture: '47.jpg',
+  id: 47
+},
+{
+  title: 'Cuzco en mi corazón',
+  picture: '48.jpg',
+  id: 48
+},
+{
+  title: 'Niño Manuelito',
+  picture: '49.jpg',
+  id: 49
+},
+{
+  title: 'Musicales ... los de Broadway',
+  picture: '50.jpg',
+  id: 50
+},
+{
+  title: 'Timbas inolvidables',
+  picture: '51.jpg',
+  id: 51
+},
+{
+  title: 'Aficionados al fútbol',
+  picture: '52.jpg',
+  id: 52
+},
+{
+  title: 'El Perú profundo',
+  picture: '53.jpg',
+  id: 53
+},
+{
+  title: 'Laberintos de la memoria',
+  picture: '54.jpg',
+  id: 54
+},
+{
+  title: 'Travesuras',
+  picture: '55.jpg',
+  id: 55
+},
+{
+  title: 'Mis increíbles mascotas',
+  picture: '56.jpg',
+  id: 56
+},
+{
+  title: 'El animal invisible',
+  picture: '57.jpg',
+  id: 57
+},
+{
+  title: 'El pajarraco',
+  picture: '58.jpg',
+  id: 58
+},
+{
+  title: 'Manteniendo lazos familiares',
+  picture: '59.jpg',
+  id: 59
+},
+{
+  title: 'Mi libro, mi joya',
+  picture: '60.jpg',
+  id: 60
 }
 ];
