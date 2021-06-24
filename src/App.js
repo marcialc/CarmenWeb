@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
-import Home from './screens/Home/Home';
-import About from './screens/About/About.js'
-import Crpnicas from './screens/Cronicas/Cronicas';
+import Home from './container/Home/Home';
+import About from './container/About/About.js'
+import Cronicas from './container/Cronicas/Cronicas';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <About />
       </Route>
       <Route exact path="/cronicas">
-        <Crpnicas />
+        <Cronicas />
       </Route>
     </Router>
   );

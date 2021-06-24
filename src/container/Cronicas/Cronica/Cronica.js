@@ -15,7 +15,7 @@ const Cronica = (props) => {
 
     return (
         <div className={`${classes.Cronica} `+ hide} onClick={props.clicked}>
-            <img src={require("../../../assets/cronica-"+props.image)} alt="covers" />
+            <img src={require(`../../../assets/cronica-${props.image}`)} alt="covers" />
             <p>{props.title}</p>
         </div>
     )

@@ -8,6 +8,10 @@ import RightArrow from '../../components/ui/Arrows/RightArrow';
 import Modal from '../../components/Modal/Modal';
 import Pdf from '../../components/ui/Pdf/Pdf';
 import TableOfContents from '../../components/TableOfContents/TableOfContents';
+import { chapterOne } from '../../en';
+import cronicasData from '../../cronicas-data';
+
+import './cronicas.scss'
 
 class Cronicas extends Component {
 
@@ -18,7 +22,9 @@ class Cronicas extends Component {
       middle: 1,
       last: 2,
       showChapter: false,
-      showIndex: false
+      showIndex: false,
+      clickedTitle: 'error',
+      clickedImage: '1.jpg',
   };
 
   componentDidMount () {
@@ -54,8 +60,11 @@ class Cronicas extends Component {
     this.setState({ first:first, middle:middle, last:last })
   }
 
-  showChapterHandler = () => {
-    this.setState({ showChapter: true });
+  showChapterHandler = (clickedPosition) => {
+
+    const clickedChapter = cronicasData[clickedPosition];
+
+    this.setState({ showChapter: true, clickedTitle: clickedChapter.title, clickedImage: clickedChapter.picture });
   }
 
   closeChapterHandler = () => {
@@ -103,9 +112,9 @@ class Cronicas extends Component {
       displayData = (
         <div className={classes.Cronicas} >
           <LeftArrow goToPrevSlide={this.leftArrowHandler} />
-          <Cronica hide={true}  className={classes.Extra} image={cronicasData[first].picture} title={cronicasData[first].title} clicked={this.showChapterHandler} />
-          <Cronica hide={false} image={cronicasData[middle].picture} title={cronicasData[middle].title} clicked={this.showChapterHandler} />
-          <Cronica hide={true} className={classes.Extra} image={cronicasData[last].picture} title={cronicasData[last].title} clicked={this.showChapterHandler} />
+          <Cronica hide={true}  className={classes.Extra} image={cronicasData[first].picture} title={cronicasData[first].title} clicked={() => this.showChapterHandler(first)} />
+          <Cronica hide={false} image={cronicasData[middle].picture} title={cronicasData[middle].title} clicked={() => this.showChapterHandler(middle)} />
+          <Cronica hide={true} className={classes.Extra} image={cronicasData[last].picture} title={cronicasData[last].title} clicked={() => this.showChapterHandler(last)} />
           <RightArrow goToNextSlide={this.rightArrowHandler} />
         </div>
       )
@@ -117,13 +126,25 @@ class Cronicas extends Component {
           <div className={classes.CronicasHeader}>
             <a href="/"><p className={classes.Name}>CARMEN RUIZ</p></a>
             <p className={classes.Title}>PARA QUE NO QUEDE EN EL OLVIDO</p>
-            <img className={classes.Button} src={require("./index.png")} onClick={this.openIndexHandler} alt="Index-Button" />
+            <div className="burgerButton" onClick={this.openIndexHandler}>
+              <div className="patties"></div>
+              <div className="patties"></div>
+              <div className="patties"></div>
+            </div>
+            {/* <img className={classes.Button} src={require("./index.png")} onClick={this.openIndexHandler} alt="Index-Button" /> */}
             <Modal show={this.state.showIndex} modalClosed={this.closeIndexHandler}>
               <TableOfContents clicked={this.indexHandler} data={cronicasData} />
             </Modal>
           </div>
-          <Modal show={this.state.showChapter} modalClosed={this.closeChapterHandler} >
+          {/* <Modal show={this.state.showChapter} modalClosed={this.closeChapterHandler} >
             <Pdf />
+          </Modal> */}
+          <Modal show={this.state.showChapter} modalClosed={this.closeChapterHandler} >
+            <div className={classes.chapterText}>
+              <h1>{this.state.clickedTitle}</h1>
+              <img src={require(`../../assets/cronica-${this.state.clickedImage}`)} alt={this.state.clickedTitle} />
+              <p>{chapterOne.pages[0]}</p>
+            </div>
           </Modal>
           {displayData}
       </div>

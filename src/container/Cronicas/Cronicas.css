@@ -19,19 +19,35 @@
     position: sticky;
     top: 0;
     height: 75px;
-    border-bottom: 2px solid black;
-}
-
-.Button {
-    width: 45px; 
-    height: 45px;
-    margin: 5px;
-    margin-right: 50px;
-    padding: 5px;
-    border-radius: 5px;
     border: 1px solid transparent;
     cursor: pointer;
 }
+
+/* .burgerButton {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    margin: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.burgerButton:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.patties {
+    height: 2px;
+    width: 4rem;
+    margin: 10px 0;
+    background-color: black;
+}
+
+.patties:hover {
+    transform: rotate(30deg);
+} */
 
 .Button:hover {
     background-color: rgb(218, 214, 214);
@@ -60,6 +76,17 @@
 
 .PhoneButton {
     display: none;
+}
+
+.chapterText {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.chapterText > img {
+    width: 20rem;
 }
 
 @media (max-width: 500px) {
